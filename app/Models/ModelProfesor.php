@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Facultad extends Model
+class ModelProfesor extends Model
 {
-    protected $table = 'facultad';
-    protected $primaryKey = 'cod_facultad';
+    protected $table = 'profesor';
+    protected $primaryKey = 'cod_profesor';
     public $timestamps = true;
 }

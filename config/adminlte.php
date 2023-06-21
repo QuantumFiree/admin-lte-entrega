@@ -321,7 +321,7 @@ return [
         ],
 
         */
-        ['header' => 'Sistema de Información'],
+        ['header' => 'Sistema de Información semillero'],
         [
             'text' => 'Facultades',
             'url'  => '/facultades/listado',

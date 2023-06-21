@@ -9,8 +9,8 @@ use App\Models\Facultad;
 class Facultades extends Controller
 {
     public function index(){
-        $facultades = DB::table('facultades')->get();
-        return view('facultades.listado', ['facultades' => $facultades]);
+        $facultad = DB::table('facultad')->get();
+        return view('facultades.listado', ['facultades' => $facultad]);
     }
 
     public function form_registro(){
@@ -19,8 +19,8 @@ class Facultades extends Controller
 
     public function registrar(Request $request){
         $facultad = new Facultad();
-        $facultad->codfacultad = $request->input('codfacultad');
-        $facultad->nomfacultad = $request->input('nomfacultad');
+        $facultad->cod_facultad = $request->input('codfacultad');
+        $facultad->nom_facultad = $request->input('nomfacultad');
         $facultad->save();
         return redirect()->route('listadoFacultades');
     }
@@ -29,6 +29,19 @@ class Facultades extends Controller
         // Busca el registro en la tabla con el respectivo codigo
         $facultad = Facultad::findOrFail($id);
         $facultad->delete();
+        return redirect()->route('listadoFacultades');
+    }
+
+    public function viewEditar($id) {
+        $facultad = DB::table('facultad')->where('cod_facultad', $id)->first();
+        return view('facultades.formEditar', ['facultad' => $facultad]);
+    }
+
+    public function editar(Request $request) {
+        DB::table('facultad')
+        ->where('cod_facultad', $request->input('codfacultad'))
+        ->update(['nom_facultad' => $request->input('nomfacultad')]);
+
         return redirect()->route('listadoFacultades');
     }
 }

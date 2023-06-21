@@ -19,27 +19,27 @@ class FacultadesSeeders extends Seeder
     {
         $datos = [
             [
-                'codFacultad'=> '10',
-                'nomFacultad'=> 'Artes',
+                'cod_facultad'=> '10',
+                'nom_facultad'=> 'Artes',
             ],
             [
-                'codFacultad'=> '11',
-                'nomFacultad'=> 'Ingenieria',
+                'cod_facultad'=> '11',
+                'nom_facultad'=> 'Ingenieria',
             ],
             [
-                'codFacultad'=> '12',
-                'nomFacultad'=> 'Derecho',
+                'cod_facultad'=> '12',
+                'nom_facultad'=> 'Derecho',
             ],
             [
-                'codFacultad'=> '13',
-                'nomFacultad'=> 'Educacion',
+                'cod_facultad'=> '13',
+                'nom_facultad'=> 'Educacion',
             ],
             [
-                'codFacultad'=> '14',
-                'nomFacultad'=> 'Ciencias exactas y naturales',
+                'cod_facultad'=> '14',
+                'nom_facultad'=> 'Ciencias exactas y naturales',
             ]
         ];
 
-            DB::table('facultades')->insert($datos); 
+            DB::table('facultad')->insert($datos); 
     }
 }
