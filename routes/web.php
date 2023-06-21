@@ -38,8 +38,16 @@ Route::post('/programas/registrar', [Programas::class, 'registrar']);
 
 // PROFESORES
 Route::get('/profesores/listado', [Profesores::class, 'index'])->name('listadoProfesores');
+Route::get('/profesores/eliminar/{id}', [Profesores::class, 'eliminar'])->name('eliminarProfesor');
+Route::get('/profesores/registrar', [Profesores::class, 'viewRegistrar']);
+Route::post('/profesores/registrar', [Profesores::class, 'registrar']);
 
-Route::get('/estudiantes/listado', [Estudiantes::class, 'index']);
+// ESTUDIANTES
+Route::get('/estudiantes/listado', [Estudiantes::class, 'index'])->name('listadoEstudiantes');
+Route::get('/estudiantes/eliminar/{id}', [Estudiantes::class, 'eliminar'])->name('eliminarEstudiante');
+Route::get('/estudiantes/registrar', [Estudiantes::class, 'viewRegistrar']);
+Route::post('/estudiantes/registrar', [Estudiantes::class, 'registrar']);
+
 Route::get('/calificaciones/listado', [Calificaciones::class, 'index']);
 Route::get('/dashboard', [HomeController::class, 'index']);
 

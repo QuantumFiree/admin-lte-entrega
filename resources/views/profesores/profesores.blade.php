@@ -12,7 +12,7 @@
 @section('content')
 <div class="container-aux">
 <h1 class="title-aux">Profesores</h1></br>
-<a class ="btn btn-success btn-custom" href="{{route('viewRegistrarPrograma')}}">Adicionar</a>
+<a class ="btn btn-success btn-custom" href="/profesores/registrar">Adicionar</a>
     <table class="table table-success">
   <thead>
     <tr>
@@ -38,7 +38,7 @@
       <td>{{$profesor->nom_facultad}}</td>
       <td>
         <a class ="btn btn-warning" href="">Editar</a>
-        <a class ="btn btn-danger" href="">Eliminar</a>
+        <a class ="btn btn-danger" href="{{route('eliminarProfesor', $profesor->cod_profesor)}}">Eliminar</a>
     </td>
     </tr>
     @endforeach

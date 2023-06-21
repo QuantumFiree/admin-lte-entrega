@@ -29,12 +29,12 @@ class ProgramasSeeders extends Seeder
                 'facultad'=>'11'
             ],
             [
-                'cod_programa'=>'22',
+                'cod_programa'=>'23',
                 'nom_programa'=>'Ingenieria de software',
                 'facultad'=>'11'
             ],
             [
-                'cod_programa'=>'23',
+                'cod_programa'=>'22',
                 'nom_programa'=>'Fisica',
                 'facultad'=>'14'
             ],
