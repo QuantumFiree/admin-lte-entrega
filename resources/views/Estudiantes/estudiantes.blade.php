@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="/resources/css/admin_custom.css">
     <style>
       .title-aux{
-        padding-top: 31px;
+        padding-top: 30px;
         font-weight: bold;
       }
 
